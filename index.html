@@ -12,30 +12,33 @@
 
 
 <script>
-	
+	//adding variables is called decaring the variables
+	//set them equal to 0 to start the variables
         var allergy_count = 0;
         var cold_count = 0;
 
-
+	//this function adds the counts the allergy
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 
         }
-
+	//this function adds the counts the cold
         function coldAdd(){
             cold_count = cold_count + 1;
         } 
-	
+		//these variables display the results
 		function displayResults(){ 
 			var coldPercent = cold_count/4 * 100;
 			var allergyPercent = allergy_count/4 * 100;
-		
+			//outputs the results recorded in the count
+			//BR means line break
 			var resultText = document.getElementById("results");
 			resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%" + "<br> Probability it is a cold = "+ coldPercent + "%" + "<br>" + "<br> your test is finished!";
 	};
 
 	
   </script>
+<!-- style used to show the design -->
 
 
 
@@ -79,18 +82,22 @@
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
 	</div>
-	
+	<!-- DIV creates a division -->
     	<div id="content" class="w3-container">
        		<p> Are your eyes watery or itchy? </p> 
 		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-grey w3-round"> yes </a>
 		<a href="#two" onclick="coldAdd();" class="w3-btn w3-grey w3-round"> no </a>
+		<!-- Creates yes or no button -->
+		<!-- onclick is a event handler-->
+		<!--class="w3-btn w3-grey w3-round" is used for the shape and design -->
     	</div>
 	<!-- Figured out how to send to new page (HREFS) and corrected mistakes in buttons -->
 </div>
-
+<!-- start of code --> 
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
+		<!-- Header -->
 	</div>
 	
 	<div id="content" class="w3-container">
@@ -125,7 +132,7 @@
 </div>	
 	<!-- copy and pasted code twice for questions and added questions -->
 	<!-- Added "onclick" for all of the questions to get results page -->
-	
+	<!-- pre results page -->
 <div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
@@ -144,12 +151,15 @@
 		<div id="content" class="w3-container">
 		<p> Results for the test </p>
 		<a onclick="displayResults();" class="w3-btn w3-grey w3-round"> Show Results </a>
+                <!-- displays precentages-->
        		<p id="results"></p>
    	</div>
 		       
    </div>
 		
-
+<!-- a footer is a small section at bottom of page -->	
+<!-- Do you have chest congestion? -->
+<!-- Do you have sneeze attacks? -->
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
